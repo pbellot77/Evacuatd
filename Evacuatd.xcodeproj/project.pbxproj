@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA4E5B261D722C34009D87DE /* EVStatusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4E5B251D722C34009D87DE /* EVStatusTableViewController.swift */; };
 		BA9EE11C1D67C0F100B71478 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9EE11B1D67C0F100B71478 /* AppDelegate.swift */; };
-		BA9EE11E1D67C0F100B71478 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9EE11D1D67C0F100B71478 /* ViewController.swift */; };
 		BA9EE1211D67C0F100B71478 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9EE11F1D67C0F100B71478 /* Main.storyboard */; };
 		BA9EE1241D67C0F100B71478 /* Evacuatd.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA9EE1221D67C0F100B71478 /* Evacuatd.xcdatamodeld */; };
 		BA9EE1261D67C0F100B71478 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA9EE1251D67C0F100B71478 /* Assets.xcassets */; };
@@ -35,9 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA4E5B251D722C34009D87DE /* EVStatusTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVStatusTableViewController.swift; sourceTree = "<group>"; };
 		BA9EE1181D67C0F100B71478 /* Evacuatd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Evacuatd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA9EE11B1D67C0F100B71478 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BA9EE11D1D67C0F100B71478 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BA9EE1201D67C0F100B71478 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA9EE1231D67C0F100B71478 /* Evacuatd.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Evacuatd.xcdatamodel; sourceTree = "<group>"; };
 		BA9EE1251D67C0F100B71478 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				BA9EE11B1D67C0F100B71478 /* AppDelegate.swift */,
-				BA9EE11D1D67C0F100B71478 /* ViewController.swift */,
+				BA4E5B251D722C34009D87DE /* EVStatusTableViewController.swift */,
 				BA9EE11F1D67C0F100B71478 /* Main.storyboard */,
 				BA9EE1251D67C0F100B71478 /* Assets.xcassets */,
 				BA9EE1271D67C0F100B71478 /* LaunchScreen.storyboard */,
@@ -265,7 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA9EE11E1D67C0F100B71478 /* ViewController.swift in Sources */,
+				BA4E5B261D722C34009D87DE /* EVStatusTableViewController.swift in Sources */,
 				BA9EE11C1D67C0F100B71478 /* AppDelegate.swift in Sources */,
 				BA9EE1241D67C0F100B71478 /* Evacuatd.xcdatamodeld in Sources */,
 			);
@@ -518,6 +518,7 @@
 				BA9EE1451D67C0F100B71478 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA9EE1461D67C0F100B71478 /* Build configuration list for PBXNativeTarget "EvacuatdTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +527,7 @@
 				BA9EE1481D67C0F100B71478 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA9EE1491D67C0F100B71478 /* Build configuration list for PBXNativeTarget "EvacuatdUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +536,7 @@
 				BA9EE14B1D67C0F100B71478 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
