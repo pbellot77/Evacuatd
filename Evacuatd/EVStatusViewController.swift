@@ -1,5 +1,5 @@
 //
-//  EVStatusTableView.swift
+//  EVStatusViewController.swift
 //  Evacuatd
 //
 //  Created by Patrick Bellot on 8/29/16.
@@ -8,7 +8,15 @@
 
 import UIKit
 
-class EVStatusTableView: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class EVStatusViewController: UIViewController {
+    
+    enum Status: Int {
+        case notified
+        case preparing
+        case evacuating
+        case safe
+        case allClear
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,19 +24,17 @@ class EVStatusTableView: UIViewController, UITableViewDelegate, UITableViewDataS
         // Do any additional setup after loading the view.
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+    // MARK: - Table view data sources
+    
+    func tableView(_ tableView: UITableView,
+        numberOfRowsInSection section: Int) -> Int
+    {
+        return Status
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StatusCell", for: indexPath) 
         return cell
-    }
-    
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 

@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BA4E5B301D74910A009D87DE /* EVStatusTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4E5B2F1D74910A009D87DE /* EVStatusTableView.swift */; };
+		BA34C3311D79D6B200BC05A9 /* EVStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA34C3301D79D6B200BC05A9 /* EVStatusTableViewCell.swift */; };
+		BA34C3331D79DB8800BC05A9 /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA34C3321D79DB8800BC05A9 /* StatusViewModel.swift */; };
+		BA4E5B301D74910A009D87DE /* EVStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4E5B2F1D74910A009D87DE /* EVStatusViewController.swift */; };
 		BA9EE11C1D67C0F100B71478 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9EE11B1D67C0F100B71478 /* AppDelegate.swift */; };
 		BA9EE1211D67C0F100B71478 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9EE11F1D67C0F100B71478 /* Main.storyboard */; };
 		BA9EE1241D67C0F100B71478 /* Evacuatd.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA9EE1221D67C0F100B71478 /* Evacuatd.xcdatamodeld */; };
@@ -35,7 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BA4E5B2F1D74910A009D87DE /* EVStatusTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVStatusTableView.swift; sourceTree = "<group>"; };
+		BA34C3301D79D6B200BC05A9 /* EVStatusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVStatusTableViewCell.swift; sourceTree = "<group>"; };
+		BA34C3321D79DB8800BC05A9 /* StatusViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
+		BA4E5B2F1D74910A009D87DE /* EVStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVStatusViewController.swift; sourceTree = "<group>"; };
 		BA9EE1181D67C0F100B71478 /* Evacuatd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Evacuatd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA9EE11B1D67C0F100B71478 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA9EE1201D67C0F100B71478 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -100,7 +104,9 @@
 			isa = PBXGroup;
 			children = (
 				BA9EE11B1D67C0F100B71478 /* AppDelegate.swift */,
-				BA4E5B2F1D74910A009D87DE /* EVStatusTableView.swift */,
+				BA4E5B2F1D74910A009D87DE /* EVStatusViewController.swift */,
+				BA34C3301D79D6B200BC05A9 /* EVStatusTableViewCell.swift */,
+				BA34C3321D79DB8800BC05A9 /* StatusViewModel.swift */,
 				BA9EE11F1D67C0F100B71478 /* Main.storyboard */,
 				BA9EE1251D67C0F100B71478 /* Assets.xcassets */,
 				BA9EE1271D67C0F100B71478 /* LaunchScreen.storyboard */,
@@ -265,8 +271,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA34C3311D79D6B200BC05A9 /* EVStatusTableViewCell.swift in Sources */,
+				BA34C3331D79DB8800BC05A9 /* StatusViewModel.swift in Sources */,
 				BA9EE11C1D67C0F100B71478 /* AppDelegate.swift in Sources */,
-				BA4E5B301D74910A009D87DE /* EVStatusTableView.swift in Sources */,
+				BA4E5B301D74910A009D87DE /* EVStatusViewController.swift in Sources */,
 				BA9EE1241D67C0F100B71478 /* Evacuatd.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
