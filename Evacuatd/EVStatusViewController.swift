@@ -16,8 +16,6 @@ class EVStatusViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 100
     }
 
     override func didReceiveMemoryWarning() {
