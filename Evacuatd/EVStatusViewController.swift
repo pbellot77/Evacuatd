@@ -8,14 +8,16 @@
 
 import UIKit
 
-class EVStatusViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class EVStatusViewController: UITableViewController {
     
-    @IBOutlet weak var tableView: UITableView!
     
-    let status = ["Notified to Evacuate", "Preparing to Evacuate", "Evacuating", "Safe and Evacuated", "All Clear"]
+    var status = ["Notified to Evacuate", "Preparing to Evacuate", "Evacuating", "Safe and Evacuated", "All Clear"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 100
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,14 +26,18 @@ class EVStatusViewController: UIViewController, UITableViewDataSource, UITableVi
     }
 
     // MARK: - Table view data source
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return status.count
     }
 
    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StatusCell", for: indexPath)
 
         return cell
