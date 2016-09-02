@@ -8,41 +8,17 @@
 
 import UIKit
 
-protocol StatusCellDataSource {
-    var title: [String] { get }
-}
+class EVStatusTableViewCell: UITableViewCell {
 
-protocol StatusCellDelegate {
-    var textColor: UIColor { get }
-    var font: UIFont { get }
-}
-
-extension StatusCellDelegate {
-    
-    var textColor: UIColor {
-        return UIColor.green
-    }
-    
-    var font: UIFont {
-        return UIFont.systemFont(ofSize: 20)
-    }
-}
-
-class StatusTableViewCell: UITableView {
-    
-    @IBOutlet fileprivate weak var label: UILabel!
-    
-    internal var dataSource: StatusCellDataSource?
-    internal var delegate: StatusCellDelegate?
-    
     override func awakeFromNib() {
         super.awakeFromNib()
+        // Initialization code
     }
-    
-    func configure(withDataSource dataSource: StatusCellDataSource, delegate: StatusCellDelegate?) {
-        self.dataSource = dataSource
-        self.delegate = delegate
-        
-        label.text = dataSource.title
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
     }
+
 }
