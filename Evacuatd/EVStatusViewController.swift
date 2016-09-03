@@ -36,7 +36,9 @@ class EVStatusViewController: UITableViewController {
 
    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "StatusCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "StatusCell", for: indexPath) as! EVStatusTableViewCell
+        
+        cell.configure(withDataSource: EVStatusViewModel() as TextCellDataSource)
 
         return cell
     }

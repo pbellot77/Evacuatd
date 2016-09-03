@@ -8,11 +8,27 @@
 
 import UIKit
 
+protocol TextCellDataSource {
+    var title: String { get }
+}
+
+
+
 class EVStatusTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var statusLabel: UILabel!
+    
+    fileprivate var dataSource: TextCellDataSource?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func configure(withDataSource dataSource: TextCellDataSource) {
+        self.dataSource = dataSource
+        
+        statusLabel.text = dataSource.title
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
