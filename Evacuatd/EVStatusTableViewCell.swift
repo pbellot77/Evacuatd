@@ -12,8 +12,6 @@ protocol TextCellDataSource {
     var title: String { get }
 }
 
-
-
 class EVStatusTableViewCell: UITableViewCell {
 
     @IBOutlet weak var statusLabel: UILabel!
