@@ -9,7 +9,7 @@
 import UIKit
 
 protocol TextCellDataSource {
-    var title: String { get }
+    var title: Array<String> { get }
 }
 
 class EVStatusTableViewCell: UITableViewCell {
@@ -26,7 +26,8 @@ class EVStatusTableViewCell: UITableViewCell {
     func configure(withDataSource dataSource: TextCellDataSource) {
         self.dataSource = dataSource
         
-        statusLabel.text = dataSource.title
+    
+        self.statusLabel. //need text for status label from array
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

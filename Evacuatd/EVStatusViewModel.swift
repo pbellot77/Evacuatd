@@ -11,13 +11,8 @@ import Foundation
 
 //Figure out how to use multiple titles in struct
 struct EVStatusViewModel: TextCellDataSource {
-    var title = "Notified to Evacuate"
-}
+    var title = ["Notified to Evacuate", "Preparing to Evacuate",
+                 "Evacuating", "Safe and Evacuated",
+                 "All Clear"]
 
-struct Status {
-    var status = ["Notified to Evacuate",
-                  "Preparing to Evacuate",
-                  "Evacuating",
-                  "Safe and Evacuated",
-                  "All Clear"]
 }
