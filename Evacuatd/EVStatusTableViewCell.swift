@@ -26,6 +26,7 @@ class EVStatusTableViewCell: UITableViewCell {
     func configure(withDataSource dataSource: TextCellDataSource) {
         self.dataSource = dataSource
         
+        // Get title from dataSource array
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
