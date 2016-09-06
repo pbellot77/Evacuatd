@@ -26,8 +26,6 @@ class EVStatusTableViewCell: UITableViewCell {
     func configure(withDataSource dataSource: TextCellDataSource) {
         self.dataSource = dataSource
         
-    
-        self.statusLabel. //need text for status label from array
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

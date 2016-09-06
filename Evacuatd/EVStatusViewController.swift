@@ -9,9 +9,7 @@
 import UIKit
 
 class EVStatusViewController: UITableViewController {
-    
-    
-    var status = ["Notified to Evacuate", "Preparing to Evacuate", "Evacuating", "Safe and Evacuated", "All Clear"]
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +31,6 @@ class EVStatusViewController: UITableViewController {
         return EVStatusViewModel().title.count
     }
 
-   
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StatusCell", for: indexPath) as! EVStatusTableViewCell
         
