@@ -10,7 +10,7 @@ import UIKit
 
 private enum StatusType {
     case Status
-    case Other
+   // case Other
 }
 
 private enum Status {
@@ -19,7 +19,7 @@ private enum Status {
     case Evacuating
     case ToSafe
     case AllClear
-    case Other
+   // case Other
 }
 
 private struct Section {
@@ -36,8 +36,10 @@ class EVStatusViewController: UITableViewController {
         sections = [
             Section(type: .Status,
                     status: [.Notified, .Preparing, .Evacuating, .ToSafe, .AllClear]),
-            Section(type: .Other, status: [.Other])
+           // Section(type: .Other, status: [.Other])
         ]
+        
+        tableView.tableFooterView = UIView()
     }
 
     // MARK: - Table view data source
@@ -55,8 +57,8 @@ class EVStatusViewController: UITableViewController {
         switch sections[section].type {
         case .Status:
             return "Current Status"
-        case .Other:
-            return "Other"
+       // case .Other:
+            //return "Other"
         }
     }
 
@@ -66,7 +68,7 @@ class EVStatusViewController: UITableViewController {
             switch sections[indexPath.section].status[indexPath.row] {
             case .Notified, .Preparing, .Evacuating, .ToSafe, .AllClear:
                 cellIdentifier = "StatusCell"
-            case .Other:
+            //case .Other:
                 cellIdentifier = "StatusCell"
         }
         
@@ -82,8 +84,8 @@ class EVStatusViewController: UITableViewController {
             cell.textLabel?.text = "Evacuated and Safe"
         case .AllClear:
             cell.textLabel?.text = "All Clear"
-        case .Other:
-            cell.textLabel?.text = "Add other stuff here"
+        //case .Other:
+            //cell.textLabel?.text = "Add other stuff here"
         }
         
         return cell
