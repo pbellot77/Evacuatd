@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BA34C3371D79E03B00BC05A9 /* EVStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA34C3361D79E03B00BC05A9 /* EVStatusTableViewCell.swift */; };
 		BA34C3391D79E43D00BC05A9 /* EVMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA34C3381D79E43D00BC05A9 /* EVMapViewController.swift */; };
 		BA34C33B1D79E60900BC05A9 /* EVStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA34C33A1D79E60900BC05A9 /* EVStatusViewController.swift */; };
 		BA9EE11C1D67C0F100B71478 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9EE11B1D67C0F100B71478 /* AppDelegate.swift */; };
@@ -17,7 +16,6 @@
 		BA9EE1291D67C0F100B71478 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9EE1271D67C0F100B71478 /* LaunchScreen.storyboard */; };
 		BA9EE1341D67C0F100B71478 /* EvacuatdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9EE1331D67C0F100B71478 /* EvacuatdTests.swift */; };
 		BA9EE13F1D67C0F100B71478 /* EvacuatdUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9EE13E1D67C0F100B71478 /* EvacuatdUITests.swift */; };
-		BAA2253C1D7B6D9700F9FBE9 /* EVStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA2253B1D7B6D9700F9FBE9 /* EVStatusViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BA34C3361D79E03B00BC05A9 /* EVStatusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVStatusTableViewCell.swift; sourceTree = "<group>"; };
 		BA34C3381D79E43D00BC05A9 /* EVMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVMapViewController.swift; sourceTree = "<group>"; };
 		BA34C33A1D79E60900BC05A9 /* EVStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVStatusViewController.swift; sourceTree = "<group>"; };
 		BA9EE1181D67C0F100B71478 /* Evacuatd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Evacuatd.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,7 +51,6 @@
 		BA9EE13A1D67C0F100B71478 /* EvacuatdUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EvacuatdUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA9EE13E1D67C0F100B71478 /* EvacuatdUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvacuatdUITests.swift; sourceTree = "<group>"; };
 		BA9EE1401D67C0F100B71478 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BAA2253B1D7B6D9700F9FBE9 /* EVStatusViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVStatusViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +103,6 @@
 			children = (
 				BA9EE11B1D67C0F100B71478 /* AppDelegate.swift */,
 				BA34C33A1D79E60900BC05A9 /* EVStatusViewController.swift */,
-				BAA2253B1D7B6D9700F9FBE9 /* EVStatusViewModel.swift */,
-				BA34C3361D79E03B00BC05A9 /* EVStatusTableViewCell.swift */,
 				BA34C3381D79E43D00BC05A9 /* EVMapViewController.swift */,
 				BA9EE11F1D67C0F100B71478 /* Main.storyboard */,
 				BA9EE1251D67C0F100B71478 /* Assets.xcassets */,
@@ -274,10 +268,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA34C3371D79E03B00BC05A9 /* EVStatusTableViewCell.swift in Sources */,
 				BA34C3391D79E43D00BC05A9 /* EVMapViewController.swift in Sources */,
 				BA34C33B1D79E60900BC05A9 /* EVStatusViewController.swift in Sources */,
-				BAA2253C1D7B6D9700F9FBE9 /* EVStatusViewModel.swift in Sources */,
 				BA9EE11C1D67C0F100B71478 /* AppDelegate.swift in Sources */,
 				BA9EE1241D67C0F100B71478 /* Evacuatd.xcdatamodeld in Sources */,
 			);

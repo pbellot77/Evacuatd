@@ -8,81 +8,84 @@
 
 import UIKit
 
-class EVStatusViewController: UITableViewController {
+private enum StatusType {
+    case Status
+    case Other
+}
 
+private enum Status {
+    case Notified
+    case Preparing
+    case Evacuating
+    case ToSafe
+    case AllClear
+    case Other
+}
+
+private struct Section {
+    var type: StatusType
+    var status: [Status]
+}
+
+class EVStatusViewController: UITableViewController {
+    private var sections = [Section]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        sections = [
+            Section(type: .Status,
+                    status: [.Notified, .Preparing, .Evacuating, .ToSafe, .AllClear]),
+            Section(type: .Other, status: [.Other])
+        ]
     }
 
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return sections.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return EVStatusViewModel().title.count
+        return sections[section].status.count
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch sections[section].type {
+        case .Status:
+            return "Current Status"
+        case .Other:
+            return "Other"
+        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "StatusCell", for: indexPath) as! EVStatusTableViewCell
+        var cellIdentifier: String
         
-        cell.configure(withDataSource: EVStatusViewModel() as TextCellDataSource)
-
+            switch sections[indexPath.section].status[indexPath.row] {
+            case .Notified, .Preparing, .Evacuating, .ToSafe, .AllClear:
+                cellIdentifier = "StatusCell"
+            case .Other:
+                cellIdentifier = "StatusCell"
+        }
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+        switch sections[indexPath.section].status[indexPath.row]{
+        case .Notified:
+            cell.textLabel?.text = "Notified to Evacuate"
+        case .Preparing:
+            cell.textLabel?.text = "Preparing to Evacuate"
+        case .Evacuating:
+            cell.textLabel?.text = "Evacuating"
+        case .ToSafe:
+            cell.textLabel?.text = "Evacuated and Safe"
+        case .AllClear:
+            cell.textLabel?.text = "All Clear"
+        case .Other:
+            cell.textLabel?.text = "Add other stuff here"
+        }
+        
         return cell
     }
-
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
